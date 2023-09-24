@@ -1,0 +1,85 @@
+@use '../utils/' as u;
+
+body {
+	background-image: url(../../../app/assets/images/bg-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: u.$violet;
+
+	@media screen and (min-width: 1200px) {
+		background-image: url(../../../app/assets/images/bg-desktop.svg);
+		background-size: cover;
+		height: 100vh;
+		width: 100%;
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: left;
+
+		width: 100%;
+
+		.logo-img {
+			padding: 4em 0 7.5em 4.25em;
+
+			@media screen and (min-width: 1200px) {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	main {
+		@media screen and (min-width: 1200px) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+		}
+		.hero-img {
+			max-width: 80%;
+			margin: 0 auto;
+
+			@media screen and (min-width: 1200px) {
+				margin: 0;
+				max-width: 100%;
+				padding-top: 5em;
+			}
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			padding-block: 7.5em 0;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+
+			@media screen and (min-width: 1200px) {
+				text-align: left;
+				margin: 0;
+				padding: 0 0 0 3em;
+				max-width: 40%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			p {
+				padding-top: 0.75em;
+			}
+		}
+	}
+
+	footer {
+		gap: 1.25em;
+		padding-block: 8.5em 5em;
+
+		span {
+			text-align: center;
+		}
+
+		@media screen and (min-width: 1200px) {
+			padding-bottom: 0;
+		}
+	}
+}
